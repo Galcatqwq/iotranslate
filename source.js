@@ -2,7 +2,7 @@
 // @name         TETR.IO中文翻译
 // @namespace    https://github.com/huanmieSAA/iotranslate
 // @version      2.0.1
-// @description  将TETR.IO中的大部分可编辑内容翻译成中文。制作鸣谢：mrz,xb，渣渣120，B4093以及方块群友。2.0.1更新：支持双人复活文本汉化，补充修复未汉化文本。大家有遇到没翻的文本可以截图发送到xchen5939@gmail.com我会及时添加
+// @description  将TETR.IO中的大部分可编辑内容翻译成中文。制作鸣谢：mrz,xb，渣渣120，B4093以及方块群友。2.0.0更新：支持duo复活文本汉化。大家有遇到没翻的文本可以截图发送到xchen5939@gmail.com我会及时添加
 // @match        https://*.tetr.io/*
 // @grant        GM_registerMenuCommand
 // @grant        unsafeWindow
@@ -1808,7 +1808,7 @@
     const dataIdMap = {
         offline: [/INVISIBLE/g, "隐身"],
     };
-
+    // 双人模式复活文本
     const zenithPromptMap = {
         "Perform a 3-Combo": "完成1次3连击",
         "Clear 2 Doubles": "完成2次消二",
