@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         TETR.IO中文翻译
 // @namespace    https://github.com/huanmieSAA/iotranslate
-// @version      2.0.1
-// @description  将TETR.IO中的大部分可编辑内容翻译成中文。制作鸣谢：mrz,xb，渣渣120，B4093以及方块群友。2.0.0更新：支持duo复活文本汉化。大家有遇到没翻的文本可以截图发送到xchen5939@gmail.com我会及时添加
+// @version      2.0.2
+// @description  将TETR.IO中的大部分可编辑内容翻译成中文。制作鸣谢：mrz,xb，渣渣120，B4093以及方块群友。2.0.2更新：修复开关位置。大家有遇到没翻的文本可以截图发送到xchen5939@gmail.com我会及时添加
 // @match        https://*.tetr.io/*
 // @grant        GM_registerMenuCommand
 // @grant        unsafeWindow
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @downloadURL  https://update.greasyfork.org/scripts/466016/TETRIO%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91.user.js
-// @updateURL    https://update.greasyfork.org/scripts/466016/TETRIO%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91.meta.js
 // @run-at       document-start
+// @downloadURL https://update.greasyfork.org/scripts/466016/TETRIO%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91.user.js
+// @updateURL https://update.greasyfork.org/scripts/466016/TETRIO%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91.meta.js
 // ==/UserScript==
 
 (() => {
@@ -19,7 +19,7 @@
     // 定义文本映射表
 
     const config = {
-        replaceGame: GM_getValue('replaceGame', 1), // 是否替换游戏内文本 (1: 启用, 0: 禁用)
+        replaceGame: GM_getValue('replaceGame', 0), // 是否替换游戏内文本 (1: 启用, 0: 禁用)
         debug: GM_getValue('debug', 0), // 调试 (1: 启用, 0: 禁用)
     };
 
@@ -2258,28 +2258,20 @@
         switchContainer.id = 'iotranslate-switch';
         switchContainer.style.cssText = `
             position: fixed;
-            bottom: -285px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 20px;
+            left: 5px;
             background: rgba(101, 116, 151, 0.2);
-            padding: 15px 25px;
+            padding: 15px 15px;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             z-index: 999999;
             color: white;
             font-family: sans-serif;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        `;
-
-        // 创建按钮容器,保持横向排列
-        const buttonRow = document.createElement('div');
-        buttonRow.style.cssText = `
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            width: fit-content;
         `;
 
         const label = document.createElement('span');
@@ -2318,7 +2310,7 @@
             transition: all 0.3s;
             background: #2196F3;
             color: white;
-            margin-left: 10px;
+            margin-top: 0px;
         `;
 
         refreshButton.addEventListener('mouseover', () => {
@@ -2334,12 +2326,21 @@
             location.reload();
         });
 
-        // 将标签和按钮添加到按钮容器中
-        buttonRow.appendChild(label);
+        // 创建按钮容器,让按钮横向排列
+        const buttonRow = document.createElement('div');
+        buttonRow.style.cssText = `
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        `;
+
+        // 将按钮添加到按钮容器
         buttonRow.appendChild(switchButton);
         buttonRow.appendChild(refreshButton);
 
-        // 添加按钮容器到主容器
+        // 将所有元素添加到主容器(竖排排列)
+        switchContainer.appendChild(label);
         switchContainer.appendChild(buttonRow);
 
         // 添加红色提示文本
@@ -2348,9 +2349,10 @@
         warningText.style.cssText = `
             color: #ff6b6b;
             font-size: 12px;
-            text-align: center;
-            margin-top: 5px;
+            text-align: left;
+            margin-top: 10px;
             line-height: 1.4;
+            max-width: 200px;
         `;
         switchContainer.appendChild(warningText);
 
@@ -2387,14 +2389,14 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             configObserver.observe(document.body, { childList: true, subtree: true });
-            
+
             // 监听 right_scroller 元素
             const checkRightScroller = setInterval(() => {
                 const rightScroller = document.querySelector('.right_scroller');
                 if (rightScroller) {
-                    rightScrollerObserver.observe(rightScroller, { 
-                        attributes: true, 
-                        attributeFilter: ['class'] 
+                    rightScrollerObserver.observe(rightScroller, {
+                        attributes: true,
+                        attributeFilter: ['class']
                     });
                     clearInterval(checkRightScroller);
                     updateSwitchVisibility();
@@ -2407,11 +2409,13 @@
 
         const rightScroller = document.querySelector('.right_scroller');
         if (rightScroller) {
-            rightScrollerObserver.observe(rightScroller, { 
-                attributes: true, 
-                attributeFilter: ['class'] 
+            rightScrollerObserver.observe(rightScroller, {
+                attributes: true,
+                attributeFilter: ['class']
             });
             updateSwitchVisibility();
         }
     }
 })();
+
+
