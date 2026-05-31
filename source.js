@@ -136,6 +136,7 @@
         "DELETE MY ACCOUNT": "删除我的账号",
         "DELETING IN": "删除中",
         //主菜单文本
+        
         //多人模式相关文本
         MULTIPLAYER: "联合",
         "play online with friends and foes": "与好友和NPC进行联合行动",
@@ -143,9 +144,10 @@
         "leaderboards, achievements, replays and more": "排行榜,成就,回放等等",
         "NEW!": "更新!",
         "join public games": "加入公开战局",
+        
         //联赛相关文本
-        "Thank you for playing TETR.IO! After over four years, Season 1 of Tetra League is coming to a close. We've got something exciting coming, so please stay tuned for it!": "感谢您游玩 TETR.IO!经过四年多的时间,Tetra联赛 第一赛季即将结束.我们还将推出更多精彩内容,敬请期待!",
-        "You can continue to play Tetra League until the end of the Season, at which point your final standing (if you are ranked) will be memorialized on your profile!": "您可以在赛季结束前继续游玩Tetra联赛,赛季结束后您的最终排名（如果有排名的话）将会记录在您的个人档案中!",
+        "Thank you for playing TETR.IO! After over four years, Season 1 of Tetra League is coming to a close. We've got something exciting coming, so please stay tuned for it!": "感谢您享受TETR.IO!经过四年多的时间,Tetra联赛 第一赛季即将结束.我们还将推出更多精彩内容,敬请期待!",
+        "You can continue to play Tetra League until the end of the Season, at which point your final standing (if you are ranked) will be memorialized on your profile!": "您可以在赛季结束前继续挑战Tetra联赛,赛季结束后您的最终排名（如果有排名的话）将会记录在您的个人档案中!",
         "Earn a badge that reflects your final placement!": "您将获得一枚对应您最终排名的徽章",
         "July 26th": "7月26日",
         ": Season 1 ends": ":第一赛季结束",
@@ -198,6 +200,7 @@
         "FINISH!":"完成!",
         "GAME!":"结束!",
         "TETRA LEAGUE / RESULTS":"联赛 / 结算",
+        
         //测试飞行相关文本
         "QUICK PLAY": "测试飞行",
         "scale the tower! how far can you get?": "飞跃高塔!你能飞多高?",
@@ -221,7 +224,7 @@
         "hover for more info!": "移动鼠标至这里以获取更多信息!",
         "your currently set keybinds are:": "您当前的按键绑定是:",
         PLAYING: "挑战",
-        "click to switch to SPECTATORS": "点击切换到旁观模式",
+        
         "click to copy url": "点击这里复制链接",
         EDIT: "编辑",
         "you just joined QUICK PLAY - you will play in the next game in this lobby. please wait for the current game to finish. feel free to spectate or play ZEN while waiting!": "您加入了测试飞行 - 请等待结束然后加入下一局.在等待时,您可以选择旁观挑战单人的禅意模式!",
@@ -245,45 +248,67 @@
         "THIS WEEK'S COUNTRY RANK": "本周地区排名",
         "THIS WEEK'S GLOBAL RANK": "本周全球排名",
         "THIS WEEK'S PERSONAL BEST": "本周个人最高",
-        AGAIN: "重新试炼",
-        EXPERT: "王",
         "joining game…": "正在加入战局",
-        "a less lenient challenge, for those who dare": "敢于挑战者的选择",
+        
+        AGAIN: "重新试炼",
+        
+        EXPERT: "王",
         "EXPERT MODE": "王",
+        "a less lenient challenge, for those who dare": "敢于挑战者的选择",
         "reach floor 9 to unlock": "抵达9层解锁",
-        "DOUBLE HOLE GARBAGE": "空洞诅咒",
-        "garbage may sometimes spawn with two holes": "垃圾行有时会生成两个空洞",
-        "reach floor 6 to unlock": "抵达6层解锁",
-        "receive double the garbage, cancel double the garbage": "接收双倍的垃圾行,抵消双倍的垃圾行",
-        "VOLATILE GARBAGE": "达摩克利斯之剑",
-        "MESSIER GARBAGE": "垃圾之乱",
-        "reach floor 5 to unlock": "抵达5层解锁",
-        "gravity scales up harshly by floor": "重力随楼层急剧增加",
-        "reach floor 4 to unlock": "抵达4层解锁",
+        
         "NO HOLD": "节制",
         "hold piece is disabled": "暂存方块被禁用",
         "reach floor 2 to unlock": "抵达2层解锁",
+
+        "MESSIER GARBAGE": "垃圾之乱",
         "garbage is significantly messier": "垃圾行变得更加混乱",
         "reach floor 3 to unlock": "抵达3层解锁",
+
+        "GRAVITY": "重力",
+        "gravity scales up harshly by floor": "重力随楼层急剧增加",
+        "reach floor 4 to unlock": "抵达4层解锁",
+        
+        "VOLATILE GARBAGE": "达摩克利斯之剑",
+        "receive double the garbage, cancel double the garbage": "接收双倍的垃圾行,抵消双倍的垃圾行",
+        "reach floor 5 to unlock": "抵达5层解锁",
+        
+        "DOUBLE HOLE GARBAGE": "空洞诅咒",
+        "garbage may sometimes spawn with two holes": "垃圾行有时会生成两个空洞",
+        "reach floor 6 to unlock": "抵达6层解锁",
+
+        "INVISIBLE": "隐匿",
         "non-garbage minos are only visible once every five seconds": "非垃圾行方块每五秒显形一次",
         "reach floor 7 to unlock": "抵达7层解锁",
+        
+        "THE MAGICIAN": "魔术师",
         "all-spins are rewarded, but doing the same clear twice is penalized": "启用all-spins以增强旋转奖励,但重复相同的旋转消除会受到惩罚",
         "reach floor 8 to unlock": "抵达8层解锁",
+        
         DUO: "恋情",
         "scale the tower together with someone you hold close": "与好友一起飞跃高塔",
+        "CLICK TO INVITE A FRIEND": "点此邀请好友",
+        "WAITING": "等待...",
+        "READY!": "准备!",
+        "READY": "准备",
+        READY: "准备",
+        "waiting for player": "等待队友",
+        "wait": "等待...",
+        
         reset: "重置",
+        
         "scale the tower!": "飞跃高塔!",
         "challenge the tower!": "挑战高塔!",
         "overthrow the tower!": "轰炸高塔!",
-        "waiting for player": "等待队友",
-        "wait": "等待...",
-        "CLICK TO INVITE A FRIEND": "点此邀请好友",
-        "READY!": "准备!",
-        READY: "准备",
+
+        "FOLLOWING":"跟踪",
+        
+        "GAME OVER":"试炼结束",
+        
         "KO'S":"击杀",
         "FLOOR":"楼层",
-        "GAME OVER":"试炼结束",
-        "FOLLOWING":"跟踪",
+        
+        
         "SEND TO CHAT":"分享至聊天",
         "PLAYING NOW": "正在测试飞行",
         "ATTACK":"轰炸当量",
@@ -314,6 +339,7 @@
         "T-spin TRIPLES":"T旋三消",
         "T-spin MINI QUADS":"迷你T旋四消",
         "T-spin QUADS":"T旋四消",
+        
         //自定义房间相关文本
         "CUSTOM GAME": "自定义房间",
         "create public and private rooms to play by your rules": "创建公开和私人战局,按照您的规则进行行动",
@@ -327,7 +353,7 @@
         "VERSUS KNOCKOUT": "对战",
         "ROYALE KNOCKOUT": "绝地求生",
         "PRACTICE KNOCKOUT": "练习",
-        "alive for": "于",
+        "click to switch to SPECTATORS": "点击切换到旁观模式",
         NEW: "新",
         ROOM: "房间",
         MATCH: "比赛",
@@ -439,7 +465,7 @@
         "garbage margin time": "垃圾行临界时间",
         "garbage increase": "垃圾行增量",
         "lock delay": "锁定延迟",
-        "garbage travel speed": "垃圾行飞行速度",
+        "garbage travel speed": "垃圾行触发就绪等待时长",
         "garbage cap": "单次垃圾行上限",
         "garbage cap increase": "单次垃圾行上限增量",
         "garbage cap max": "单次垃圾行最大上限",
@@ -479,7 +505,6 @@
         "messiness within attack": "攻击行混乱率",
         "avoid same column RNG": "避免同列多次生成垃圾",
         "messiness on change": "混乱率",
-        //"messiness timeout": "超时混乱",
         "garbage absolute cap": "垃圾行绝对上限",
         "garbage phase": "垃圾行阶段",
         DEFENSIVE: "防守奖励",
@@ -489,7 +514,8 @@
         "a bonus is added to both defense and offence": "发送和抵消垃圾行都会获得额外攻击奖励",
         "garbage target bonus": "垃圾行目标奖励",
         "garbage entry": "垃圾行输入方式",
-        "garbage are": "垃圾行等待时间",
+        "garbage are": "垃圾行逐行输入间隔",
+        "": "",
         "garbage queue": "垃圾行队列",
         INSTANT: "即时",
         "garbage enters instantly": "垃圾行立即生成",
@@ -498,7 +524,7 @@
         "DELAYED PIECE SPAWN": "延迟生成",
         "garbage rolls in one by one but delays your next piece": "垃圾行逐个输入,但是每段垃圾行延迟生成",
         "You are not the host of this room": "你不是房主",
-        HOST: "房主",
+        HOST: "超管",
         ANON: "匿名",
         "[2 - ∞ players] great for 1v1 and small lobbies!": "[2-∞人] 适合1v1和小规模房间!",
         "[2 - ∞ players] a full-fledged battle royale gamemode great for big lobbies!": "[2-∞人] 完整的绝地求生模式,适合大规模房间!",
@@ -1016,7 +1042,7 @@
         "display a slow animation": "显示慢速动画",
         CINEMATIC: "电影级动画",
         "display a very slow animation": "显示非常慢的动画",
-        META: "META",
+        META: "杂项",
         COUNTERS: "信息栏",
         "enforce absolute line count": "强制执行绝对行计数",
         "display progress bar": "显示进度条",
@@ -1685,6 +1711,8 @@
 
     // 特殊文本
     const specialTextMap = {
+        "host": "狗群主",
+        "alive for (.*)": "于$",
         "([0-9]+) (SECONDS?|seconds?)": "$1秒",
         "([0-9]+) (MINUTES?|minutes?)": "$1分钟",
         "([0-9]+) (MINUTE?|minute?)": "$1分钟",
