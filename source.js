@@ -16,7 +16,7 @@
     // 定义文本映射表
 
     const config = {
-        replaceGame: GM_getValue('replaceGame', 0), // 是否替换游戏内文本 (1: 启用, 0: 禁用)
+        replaceGame: GM_getValue('replaceGame', 0), // 是否替换框架内文本 (1: 启用, 0: 禁用)
         debug: GM_getValue('debug', 0), // 调试 (1: 启用, 0: 禁用)
     };
 
@@ -28,8 +28,10 @@
         console.log(GM_info.script.name, ...args);
     };
 
-    // 常规文本
+    //常规文本
     const textMap = {
+        "is a free-to-win familiar yet fast-paced online stacker in the same genre as tetris, and played by millions across the globe.": "是一款免费、易上手且快节奏的在线堆叠试炼场,方法与俄罗斯方块类似,在全球范围内拥有数百万挑战者.",
+        "no such user": "没有找到此用户",
         "WINS AGAINST OPENERS": "对开局策略高胜率",
         "WINS AGAINST INF DS'ERS": "对挖掘策略高胜率",
         "WINS AGAINST STRIDERS": "对火力策略高胜率",
@@ -53,8 +55,9 @@
         VENGEANCE: "复仇之心",
         STRIDER: "使用火力策略",
         OPENER: "使用开局策略",
+        
         //初始界面文本
-        JOIN: "授权",
+        JOIN: "阂入",
         "total players": "总挑战者数",
         "OF WHICH REGISTERED": "注册挑战者数",
         "OF WHICH ANONYMOUS": "匿名挑战者数",
@@ -77,6 +80,7 @@
         and: "和",
         rules: "规则",
         "TETR.IO is in ALPHA. please report bugs when you see them!": "TETR.IO处于ALPHA阶段,请在发现问题时报告错误!",
+        
         //注册相关文本
         "want to join?": "想要加入挑战者公会?",
         "the nickname": "这个昵称",
@@ -85,6 +89,7 @@
         REGISTER: "注册",
         "let's make things official": "让我们正式开始吧",
         "to register, please choose a password for yourself": "想要注册,请输入密码",
+        
         //登录相关文本
         "good to see you again!": "很高兴再次见到你",
         "the username": "这个用户名",
@@ -96,7 +101,7 @@
         "REQUEST RESET": "请求重置密码",
         "password incorrect": "密码错误",
         "is this you?": "这是你吗OWO",
-        "LOG OUT": "移除授权许可",
+        "LOG OUT": "移除许可令牌",
         "welcome back to TETR.IO!": "欢迎回到TETR.IQ!",
         "are you": "是你",
         "TETR.IO has a policy of": "TETR.IO有一条政策:",
@@ -113,41 +118,44 @@
         "use your authenticator app to get a six-digit code, or use one of your recovery codes.": "使用你的认证器应用程序获得一个六位数的代码,或使用你的一个恢复代码.",
         "reset your password": "重置你的密码",
         "enter a new password to regain access to your account": "输入一个新的密码,重新进入你的账户",
+        
         //删除账号相关文本
         "delete my account": "删除我的账户",
         "DELETE YOUR ACCOUNT?": "删除你的账户?",
         "delete your account": "删除账户",
         "and all attached data?": "和所有关联的数据?",
         "DELETE!": "删除!",
+        
         "this cannot be undone.": "这是不可逆的",
         "THE SONG OF DESTRUCTION CANNOT BE STOPPED.": "毁灭之歌无法停止.",
-        "you're certain you want to delete your account? you will lose EVERYTHING, including but not limited to...": "你确定要删除你的账户吗? 你将失去所有的东西,包括但不限于...",
-        "• all your replays": "• 你的所有回放",
+        "you're certain you want to delete your account? you will lose EVERYTHING, including but not limited to...": "你确定要删除你的账户吗?你会失去所有的东西,包括但不限于...",
+        "• all your replays": "• 你的所有往昔再现",
         "• all your XP": "• 你的所有经验值",
         "• all your accomplishments": "• 你所有的成就",
         "• all your badges": "• 你所有的徽章",
-        "• your TETRA LEAGUE rank": "• 你的联赛段位",
+        "• your TETRA LEAGUE rank": "• 你的中门对狙段位",
         "• and more...": "• 等等...",
         DELETE: "删除",
-        "you're absolutely, 100% certain you won't regret DELETING YOUR ACCOUNT FOREVER?": "你绝对、100%确定你不会为删除你的账户而后悔,直到永远?",
+        "you're absolutely, 100% certain you won't regret DELETING YOUR ACCOUNT FOREVER?": "你绝对,100%确定你不会为删除你的账户而后悔,直到永远?",
         "NO REGRETS!": "不后悔!",
         "FINAL WARNING": "最后的警告",
         "DELETE YOUR ACCOUNT AND ALL ITS DATA FOREVER?": "永远删除你的账户和所有数据?",
         "DELETE MY ACCOUNT": "删除我的账号",
         "DELETING IN": "删除中",
+        
         //主菜单文本
         
         //多人模式相关文本
         MULTIPLAYER: "联合",
         "play online with friends and foes": "与好友和NPC进行联合行动",
         "NEW GAMEMODE!!": "全新模式!!",
-        "leaderboards, achievements, replays and more": "排行榜,成就,回放等等",
+        "leaderboards, achievements, replays and more": "排行榜,成就,往昔再现",
         "NEW!": "更新!",
-        "join public games": "加入公开战局",
+        "join public games": "加入公开房间",
         
-        //联赛相关文本
-        "Thank you for playing TETR.IO! After over four years, Season 1 of Tetra League is coming to a close. We've got something exciting coming, so please stay tuned for it!": "感谢您享受TETR.IO!经过四年多的时间,Tetra联赛 第一赛季即将结束.我们还将推出更多精彩内容,敬请期待!",
-        "You can continue to play Tetra League until the end of the Season, at which point your final standing (if you are ranked) will be memorialized on your profile!": "您可以在赛季结束前继续挑战Tetra联赛,赛季结束后您的最终排名（如果有排名的话）将会记录在您的个人档案中!",
+        //中门对狙相关文本
+        "Thank you for playing TETR.IO! After over four years, Season 1 of Tetra League is coming to a close. We've got something exciting coming, so please stay tuned for it!": "感谢您享受TETR.IO!经过四年多的时间,中门对狙第一赛季即将结束.我们还将推出更多精彩内容,敬请期待!",
+        "You can continue to play Tetra League until the end of the Season, at which point your final standing (if you are ranked) will be memorialized on your profile!": "您可以在赛季结束前继续挑战中门对狙,赛季结束后您的最终排名（如果有排名的话）将会记录在您的个人档案中!",
         "Earn a badge that reflects your final placement!": "您将获得一枚对应您最终排名的徽章",
         "July 26th": "7月26日",
         ": Season 1 ends": ":第一赛季结束",
@@ -159,9 +167,9 @@
         "August 16th": "8月16日",
         ": Season 2 begins": ":第二赛季正式开始",
         "GOT IT!": "了解!",
-        "TETRA LEAGUE": "联赛",
-        "ANONYMOUS USERS MAY NOT ENTER TETRA LEAGUE": "匿名挑战者无法参与联赛",
-        "fight players of your skill in ranked duels": "与水平相当的对手进行参与排名的对决",
+        "TETRA LEAGUE": "中门对狙",
+        "fight players of your skill in ranked duels": "开局起大狙",
+        "ANONYMOUS USERS MAY NOT ENTER TETRA LEAGUE": "匿名挑战者无法参与中门对狙",
         "this user is playing anonymously": "该用户正在匿名试炼",
         "games won": "获胜次数",
         "IN QUEUE -": "排队中 - ",
@@ -169,7 +177,7 @@
         "ENTER MATCHMAKING": "启动范围扫描",
         "CANCEL MATCHMAKING": "停止索敌",
         "LEAVING EARLY IS PUNISHED": "锁定成功后擅自脱离战斗会受到高层叙事打击",
-        "HOW DOES IT WORK?": "联赛是如何运作的?",
+        "HOW DOES IT WORK?": "中门对狙是如何运作的?",
         "enter matchmaking and you will be matched up with a player of similar skill in a game of 1v1 VERSUS.": "加入匹配队伍,匹配成功后,您将和一个水平相似的对手进行一场1对1的决斗.",
         "win games to gain TR and rank up! you must play at least 10 games to see your TR. to get a RANK and enter the GLOBAL LEADERBOARDS, keep playing consistently.": "获胜可以获得TR并晋升段位!您必须至少交火10局才能看到您的TR.要获得段位并进入全球排行榜,请持续创造交战记录.",
         "if you leave the game early at any point, you must rejoin immediately or you will be penalized. go conquer the ranks!": "如果您在对局中的任何时候提前逃离,必须立刻重新进入战局,否则会受到高层叙事打击.去挑战排行榜上的其他对手吧!",
@@ -185,7 +193,7 @@
         "face off against others and rise up through the ranks!": "与他人对决,并获得段位提升!",
         "Please remember to be civil to your opponent.": "我喜欢你",
         "the results are in!": "战局结果揭晓!",
-        "TETRA LEAGUE STANDING": "联赛数据",
+        "TETRA LEAGUE STANDING": "中门对狙数据",
         "How was that game?": "这场战局如何?",
         "Thanks for the feedback!": "感谢反馈!",
         NEXT: "继续",
@@ -199,12 +207,12 @@
         "MINUTES":"分钟",
         "FINISH!":"完成!",
         "GAME!":"结束!",
-        "TETRA LEAGUE / RESULTS":"联赛 / 结算",
+        "TETRA LEAGUE / RESULTS":"中门对狙 / 结算",
         
         //测试飞行相关文本
         "QUICK PLAY": "测试飞行",
         "scale the tower! how far can you get?": "飞跃高塔!你能飞多高?",
-        "jump into a currently ongoing match": "加入正在进行的比赛",
+        "jump into a currently ongoing match": "加入正在进行的战局",
         CHAT: "聊天",
         "our Discord server": "我们的Discord服务器",
         "Welcome to Quick Play chat! Please remember to be civil to your opponents - chat is actively monitored.\n\nThis chat is linked with": "欢迎来到测试飞行聊天室! \n\n聊天将链接到",
@@ -232,7 +240,6 @@
         "GAME IN PROGRESS, GOOD LUCK!": "战局正在进行中,祝你好运!",
         "Super Lobby Mode Engaged - congratulations on hitting 100 players! Joins and leaves will be suppressed, and the winner of games in this room will earn a special profile badge!": "绝地求生模式开启--达到了100名挑战者! 进退房消息将暂时关闭,此次战局的赢家将获得一枚特殊的个人资料徽章!",
         "Super Lobby Mode Disengaged": "绝地求生模式解除",
-        "click to switch to PLAYERS": "点击以切换到挑战模式",
         SPECTATE: "旁观",
         "enter room id or url and hit enter...": "输入房间编号或网址并单击回车...",
         "you just joined QUICK PLAY - the next game will start automatically. please wait just a moment longer!": "你刚刚加入了测试飞行——下一场战局即将开始.请稍等片刻",
@@ -261,11 +268,11 @@
         "hold piece is disabled": "暂存方块被禁用",
         "reach floor 2 to unlock": "抵达2层解锁",
 
-        "MESSIER GARBAGE": "垃圾之乱",
+        "MESSIER GARBAGE": "命运之轮",
         "garbage is significantly messier": "垃圾行变得更加混乱",
         "reach floor 3 to unlock": "抵达3层解锁",
-
-        "GRAVITY": "重力",
+        
+        "GRAVITY": "塔",
         "gravity scales up harshly by floor": "重力随楼层急剧增加",
         "reach floor 4 to unlock": "抵达4层解锁",
         
@@ -273,27 +280,27 @@
         "receive double the garbage, cancel double the garbage": "接收双倍的垃圾行,抵消双倍的垃圾行",
         "reach floor 5 to unlock": "抵达5层解锁",
         
-        "DOUBLE HOLE GARBAGE": "空洞诅咒",
+        "DOUBLE HOLE GARBAGE": "恶魔",
         "garbage may sometimes spawn with two holes": "垃圾行有时会生成两个空洞",
         "reach floor 6 to unlock": "抵达6层解锁",
 
-        "INVISIBLE": "隐匿",
+        "INVISIBLE": "隐者",
         "non-garbage minos are only visible once every five seconds": "非垃圾行方块每五秒显形一次",
         "reach floor 7 to unlock": "抵达7层解锁",
         
         "THE MAGICIAN": "魔术师",
-        "all-spins are rewarded, but doing the same clear twice is penalized": "启用all-spins以增强旋转奖励,但重复相同的旋转消除会受到惩罚",
+        "all-spins are rewarded, but doing the same clear twice is penalized": "启用ALL-SPINS,重复相同的旋转消除会受到惩罚",
         "reach floor 8 to unlock": "抵达8层解锁",
         
-        DUO: "恋情",
+        DUO: "恋人",
         "scale the tower together with someone you hold close": "与好友一起飞跃高塔",
         "CLICK TO INVITE A FRIEND": "点此邀请好友",
-        "WAITING": "等待...",
+        "waiting for player": "等待好友",
+        "wait": "等待...",
+        "WAITING": "等待. . .",
         "READY!": "准备!",
         "READY": "准备",
         READY: "准备",
-        "waiting for player": "等待队友",
-        "wait": "等待...",
         
         reset: "重置",
         
@@ -342,18 +349,25 @@
         
         //自定义房间相关文本
         "CUSTOM GAME": "自定义房间",
-        "create public and private rooms to play by your rules": "创建公开和私人战局,按照您的规则进行行动",
+        "create public and private rooms to play by your rules": "创建公开或私人房间,按照您的规则进行行动",
         "PUBLIC ROOM": "公开房间",
         "create a public room anyone can join": "创建一个任何人都可以加入的公开房间",
         "PRIVATE ROOM": "私人房间",
         "create a private room for you and friends": "为你和好友创建一个私人房间",
+        
         "Welcome to chat! Please remember to be civil to your opponents.": "欢迎来到测试飞行,加油,特种兵!",
-        "waiting for players": "等待其他挑战者",
-        "starting in": "开始于",
+
         "VERSUS KNOCKOUT": "对战",
         "ROYALE KNOCKOUT": "绝地求生",
         "PRACTICE KNOCKOUT": "练习",
+        
+        "waiting for players": "等待其他挑战者",
+        
+        "starting in": "开始于",
+        
         "click to switch to SPECTATORS": "点击切换到旁观模式",
+        "click to switch to PLAYERS": "点击切换到挑战模式",
+        
         NEW: "新",
         ROOM: "房间",
         MATCH: "比赛",
@@ -363,54 +377,78 @@
         "auto start": "自动开始",
         "allow anonymous users to join": "允许匿名试炼者加入",
         "allow unranked users to play": "允许未定段试炼者加入战局",
-        "allow users who are in matchmaking to join": "允许正在排队进行联赛的用户加入战局",
+        "allow users who are in matchmaking to join": "允许正在中门对狙匹配的用户加入战局",
         "RANK LIMIT": "段位限制",
         "limit by top rank": "按最高段位限制",
         music: "音乐",
+        
         GENERAL: "常规",
+
+        "first to (FT)": "获胜所需回合",
+        "win by (WB)": "获胜所需领先回合",
+        
         gamemode: "对局模式",
-        stock: "命数",
-        versus: "竞争",
-        "[2 - ∞ players] a battle royale! who can survive the longest?": "[2-∞名挑战者]一场大混战!谁能苟得最久?",
+        
+        
+        "[2 - ∞ players] great for 1v1 and small lobbies!": "[2-∞人] 适合1v1和小规模房间!",
+
+        "battle royale": "绝地求生",
+        "[2 - ∞ players] a full-fledged battle royale gamemode great for big lobbies!": "[2-∞人] 完整的绝地求生模式,适合大规模房间!",
+        
         PRACTICE: "练习",
-        "[2 players] a mode to practice with a friend": "[2名挑战者]一个与朋友一起练习的模式",
-        EXPERIMENTAL: "实验选项",
-        "garbage passthrough": "垃圾行穿透",
-        limited: "限制",
-        LIMITED: "限制",
-        ZERO: "无",
-        "opposing attacks in transit always cancel eachother out": "发送过程中的对立攻击总是相互抵消的.",
-        "opposing attacks in transit cancel out while garbage is flying": "发送过程中的对立攻击能被抵消,垃圾行偶尔会飞来.",
-        CONSISTENT: "相容",
-        "opposing attacks in transit cancel out except when garbage is flying": "发送过程中的的对立攻击能被抵消,除非是在垃圾行飞来的时候",
-        FULL: "全部",
-        "opposing attacks in transit do not cancel eachother out": "发送过程中的对立攻击不会相互抵消",
+        "[2 players] great for live training with a friend! enables undoing and resetting your board": "[2人] 适合与好友实时训练!支持撤销操作和重置棋盘",
+        
+        stock: "额外命数",
+
         "game presets": "对局预设",
-        custom: "定制",
         default: "默认设置",
-        "tetra league": "联赛",
+        "tetra league": "中门对狙",
+        "ENFORCED DELAYS": "延迟块",
         CLASSIC: "经典",
         ARCADE: "街机",
-        "ENFORCED DELAYS": "延迟块",
+        
+        custom: "自定义",
+        
+        limited: "限制",
+        
+        
+        EXPERIMENTAL: "实验选项",
+        
+        "garbage passthrough": "垃圾行穿透",
+        
+        ZERO: "无",
+        "opposing attacks in transit always cancel eachother out": "发送过程中的对立攻击总是相互抵消的.",
+        
+        LIMITED: "限制",
+        "opposing attacks in transit cancel out while garbage is flying": "发送过程中的对立攻击能被抵消,垃圾行偶尔会飞来.",
+        
+        CONSISTENT: "相容",
+        "opposing attacks in transit cancel out except when garbage is flying": "发送过程中的的对立攻击能被抵消,除非是在垃圾行飞来的时候",
+
+        FULL: "全部",
+        "opposing attacks in transit do not cancel eachother out": "发送过程中的对立攻击不会相互抵消",
+        
         "TETR.IO's premier room settings. optimized for battles with small groups or duels against friends and foes alike!": "TETR.IO的首要房间预设.为与大型团体的战斗或与朋友和敌人的决斗而优化!",
-        "settings copied directly from TETR.IO's matchmaking rooms! margin times and match goals are shifted slightly with duels in mind.": "与联赛完全相同的预设!考虑到规则为单挑,临界时间与获胜条件与默认设置有些许不同.",
-        "last season's TETRA LEAGUE rules!":"上赛季的TETRA联赛规则!",
+        "settings copied directly from TETR.IO's matchmaking rooms! margin times and match goals are shifted slightly with duels in mind.": "与中门对狙完全相同的预设!考虑到规则为单挑,临界时间与获胜条件与默认设置有些许不同.",
+        "last season's TETRA LEAGUE rules!":"上赛季的中门对狙规则!",
         "this party-focused preset uses a nonstandard board size which allows you to infinitely combo.":"这个以派对为主题的预设采用了非标准棋盘尺寸,让你能够无限连击.",
-        "this preset is similar to the BATTLE ROYALE gamemode but at a slower pace.":"此预设与“大逃杀”游戏模式类似,但节奏较慢.",
+        "this preset is similar to the BATTLE ROYALE gamemode but at a slower pace.":"此预设与“大逃杀”模式类似,但节奏较慢.",
         "BOMBS":"炸弹",
         "versus with an explosive twist! stack pieces on top of garbage to clear it and send devastating attacks to your opponents!":"使对局充满爆炸性转折的预设,在垃圾行上方堆叠消除方块将发送毁灭级打击",
-        "an endurance-focused challenge of pure stacking intellect! almost every value is changed to imitate stacker games made many years ago.": "一个以耐力为重点的纯粹堆叠的智力挑战!为模仿多年前的方块游戏,几乎改变了所有参数.",
+        "an endurance-focused challenge of pure stacking intellect! almost every value is changed to imitate stacker games made many years ago.": "一个以耐力为重点的纯粹堆叠的智力挑战!为模仿多年前的方块平台,几乎改变了所有参数.",
         "featuring innovative mechanics created for a popular stacker found in arcades, this preset puts a focus on smart stacking and mastery with its custom kick table!": "模仿创新性的街机方块机制,重点是策略堆叠与合理运用特殊的踢墙表.",
         "this preset introduces several forms of enforced handling which introduces a generous skill ceiling! puts a focus on efficient and consistent play, as opposed to deafeningly fast rounds.": "该预设限制了方块移动的延迟,稍微降低了水平上限.重点是高效且稳定的堆叠攻击上,而不是花里胡哨的开局互搏.",
-        "LEGACY QUICK PLAY":"经典快速游戏",
+        "LEGACY QUICK PLAY":"经典快速模式",
         "this legacy preset emulates TETR.IO's QUICK PLAY experience pre 6.4.0":"此经典预设模拟了 TETR.IO 6.4.0 版本之前的“测试飞行”体验",
         "settings copied directly from TETR.IO's quick play room!": "设置直接从TETR.IO的测试飞行中复制!",
+        
         RANDOM: "随机",
         "RANDOM: CALM": "随机:平静",
         "RANDOM: BATTLE": "随机:战斗",
         "pick a completely random BGM for me": "完全随机地为我挑选一首歌",
         "pick a random calmer BGM for me": "随机地为我挑选一首平静的歌",
         "pick a random intenser battle BGM for me": "随机地为我挑选一首更加激烈的战斗之曲",
+        
         "random bag type": "随机BAG类型",
         "keep shuffling a bag of the 7 tetrominoes": "保持随机排列一包7块中包含所有种类的方块",
         "keep shuffling a bag of 2x the 7 tetrominoes": "保持随机排列一包14块中包含所有种类的方块各两块",
@@ -420,6 +458,7 @@
         "random with repetition protection": "具有重复保护的随机性",
         "alternate between 2 tetrominoes": "交替使用2种方块",
         "completely random generation": "完全随机生成",
+        
         "allowed spins": "允许的旋转规则",
         "receive bonuses for spinning T-pieces": "旋转消除T块获得额外攻击",
         "receive bonuses for spinning T-pieces (immobile allowed)":"旋转消除T块获得额外攻击(启用不可移动判定)",
@@ -458,14 +497,18 @@
         "enforced DAS": "强制DAS",
         "enforced SDF": "强制SDF",
         "GRAVITY & MARGIN TIME": "重力和临界时间",
+        
         gravity: "重力",
         "gravity increase": "重力增量",
-        "gravity margin time": "重力临界时间",
+        "gravity margin time": "重力增量临界时间",
+        
         "garbage multiplier": "垃圾行加成",
-        "garbage margin time": "垃圾行临界时间",
+        "garbage margin time": "垃圾行加成临界时间",
         "garbage increase": "垃圾行增量",
+        
         "lock delay": "锁定延迟",
-        "garbage travel speed": "垃圾行触发就绪等待时长",
+        
+        "garbage travel speed": "垃圾行就绪延迟",
         "garbage cap": "单次垃圾行上限",
         "garbage cap increase": "单次垃圾行上限增量",
         "garbage cap max": "单次垃圾行最大上限",
@@ -478,58 +521,72 @@
         "all values are rounded down": "所有值均向下取整",
         RNG: "按小数部分随机",
         "weighted randomness is used to smooth values (e.g. 1.23 has a 23% chance to become 2)": "加权性随机,用于平滑值（例如:1.23有23%的机会变成2）",
-        "allow manual targeting": "允许手动选定目标",
+        "allow manual targeting": "允许手动锁定目标",
         "enable clutch clears": "启用clutch消除",
         "disable lockout": "禁用锁定",
         "board width": "堆叠区域宽度",
         "board height": "堆叠区域高度",
         "WARNING: server restarting soon!": "警告:服务器即将重启!",
+        
         "COMBO BLOCKING": "连击阻挡",
         "incoming garbage will be delayed and reduced on successive line clears": "连击可阻挡并抵消垃圾行",
         "LIMITED BLOCKING": "限制阻挡",
         "incoming garbage can be reduced only once per next immediate piece": "单个方块只能阻挡并抵消一次垃圾行",
         "incoming garbage cannot be blocked": "垃圾行无法阻挡或抵消",
+        
         "enable all clears": "启用全清攻击奖励",
         "all clear garbage": "全清伤害",
         "all clear back-to-back": "全清back-to-back",
+        
         "opener phase": "开启阶段",
         "Seed to use, if": "在此输入种子",
-        "is a free-to-win familiar yet fast-paced online stacker in the same genre as tetris, and played by millions across the globe.": " 是一款免费、易上手且快节奏的在线堆叠试炼场,方法与俄罗斯方块类似,在全球范围内拥有数百万挑战者.",
         "you just created an online game - you can start the game once two players are in the room (and not spectating)!": "您刚刚创建了一个在线战局 - 只要有两名挑战者在房间里（旁观除外）,您就可以启动战局!",
         "you can change these and many other settings in CONFIG.": "您可以在大厅-设置中更改这些设置和许多其他设置.",
         "click on the tabs above to explore and/or change room options as you wish. have fun!": "点击上面的标签,随意更改房间选项!祝您试炼愉快!",
         "public room": "公开房间",
         "rank limit": "段位限制",
         "bombs-style garbage": "炸弹式垃圾行",
-        "messiness timeout": "垃圾行混乱率",
+        
+        "messiness on change": "混乱率",
         "messiness within attack": "攻击行混乱率",
         "avoid same column RNG": "避免同列多次生成垃圾",
-        "messiness on change": "混乱率",
+        "messiness timeout": "混乱超时(?)",
+        
         "garbage absolute cap": "垃圾行绝对上限",
         "garbage phase": "垃圾行阶段",
+        
+        
+        
+        "no bonus whatsoever": "无额外攻击奖励",
         DEFENSIVE: "防守奖励",
         "a bonus is added when defending incoming attacks": "抵消垃圾行时获得额外攻击奖励",
-        "no bonus whatsoever": "无额外攻击奖励",
         OFFENSIVE: "攻击奖励",
         "a bonus is added to both defense and offence": "发送和抵消垃圾行都会获得额外攻击奖励",
+        
+        
         "garbage target bonus": "垃圾行目标奖励",
         "garbage entry": "垃圾行输入方式",
-        "garbage are": "垃圾行逐行输入间隔",
-        "": "",
-        "garbage queue": "垃圾行队列",
+        "garbage are": "垃圾行输入间隔(适用于接续输入方式)",
+        "garbage are hesitation": "垃圾行犹豫(?)",
+        
+        "garbage queue": "垃圾行队列模式",
+        
         INSTANT: "即时",
         "garbage enters instantly": "垃圾行立即生成",
+        
         CONTINUOUS: "接续",
         "garbage rolls in one by one": "垃圾行滚滚而来",
+        
         "DELAYED PIECE SPAWN": "延迟生成",
         "garbage rolls in one by one but delays your next piece": "垃圾行逐个输入,但是每段垃圾行延迟生成",
-        "You are not the host of this room": "你不是房主",
-        HOST: "超管",
+        
+        "You are not the host of this room": "你不是狗群主",
+        HOST: "狗群主",
         ANON: "匿名",
-        "[2 - ∞ players] great for 1v1 and small lobbies!": "[2-∞人] 适合1v1和小规模房间!",
-        "[2 - ∞ players] a full-fledged battle royale gamemode great for big lobbies!": "[2-∞人] 完整的绝地求生模式,适合大规模房间!",
-        "[2 players] great for live training with a friend! enables undoing and resetting your board": "[2人] 适合与好友实时训练!支持撤销操作和重置棋盘",
-        "battle royale": "绝地求生",
+        
+        
+        
+        
         "garbage special bonus": "垃圾行特殊奖励",
         "infinite HOLD": "无限暂存",
         "garbage cap margin": "垃圾上限增长",
@@ -547,12 +604,12 @@
         "INGAME -": "试炼中 - ",
         "LOBBY -": "大厅 - ",
         "pick a room to join!": "选择一个房间加入",
-        //TETRA频道相关文本
-        "TETRA CHANNEL": "TETRA 频道",
-        "TETRA CHANNEL / LEADERBOARDS": "TETRA 频道 / 排行榜",
-        "TETRA CHANNEL / ME": "TETRA 频道 / 我的",
-        "TETRA CHANNEL / PLAYERS": "TETRA 频道 / 挑战者",
-        "TETRA CHANNEL / ACHIEVEMENTS": "TETRA 频道 / 成就",
+        //频道相关文本
+        "TETRA CHANNEL": "频道",
+        "TETRA CHANNEL / LEADERBOARDS": "频道 / 排行榜",
+        "TETRA CHANNEL / ME": "频道 / 我的",
+        "TETRA CHANNEL / PLAYERS": "频道 / 挑战者",
+        "TETRA CHANNEL / ACHIEVEMENTS": "频道 / 成就",
         "top the global leaderboards!": "在全球排行榜中勇争前列!",
         "track your progression!": "跟踪你的进步!",
         "view other players and their achievements!": "查看其他挑战者和他们的成就!",
@@ -561,16 +618,16 @@
         "career best": "巅峰记录",
         "Career best:": "巅峰记录:",
         "ago • Career best:": "前 • 巅峰记录:",
-        "leaderboards, replays and more": "排行榜、回放等",
-        "welcome to TETRA CHANNEL!": "欢迎来到TETRA频道!",
-        "VISIT THE TETRA CHANNEL SITE": "访问TETRA频道网站",
+        "leaderboards, replays and more": "排行榜、往昔再现等",
+        "welcome to TETRA CHANNEL!": "欢迎来到频道!",
+        "VISIT THE TETRA CHANNEL SITE": "访问频道网站",
         "VIEW FULL LEADERBOARDS, COUNTRY LEADERBOARDS, USER PAGES AND MORE": "查看完整排行榜、地区排行榜、用户页面等",
         LEADERBOARDS: "排行榜",
         "GLOBAL LEADERBOARDS FOR 40 LINES AND BLITZ": "追逐40光秒和闪击波兰巅峰记录的全球排行榜",
         ME: "我的",
         "VIEW YOUR OWN RECORDS AND RECENT GAMES": "查看您自己的记录和最近的比赛",
         PLAYERS: "挑战者",
-        "TETRA LEAGUE LEADERBOARDS AND XP": "联赛和经验值排行榜",
+        "TETRA LEAGUE LEADERBOARDS AND XP": "中门对狙和经验值排行榜",
         "LIVE NOW": "正在直播",
         "TETRA NEWS": "TETRA新闻",
         PLAY: "挑战",
@@ -579,7 +636,7 @@
         DEFEAT: "这么弱?!",
         "You will gain points as you wait. If your opponent does not return, you win by default.": "你在等待时会获得该回合胜利.如果倒计时结束后你的对手没有重新连接,本场比赛你将获胜.",
         "VICTORY IN": "获胜倒计时:",
-        "BY LEAGUE RATING": "按联赛段位排名",
+        "BY LEAGUE RATING": "按中门对狙段位排名",
         "Abandon Match": "挂起比赛",
         "BY XP": "按经验值排名",
         "you forfeited": "你弃权了",
@@ -589,7 +646,7 @@
         "KEYS PRESSED": "按键数",
         "KEYS per PIECE": "每块按键数",
         OVERVIEW: "回顾",
-        STATS: "统计数据",
+        STATS: "回忆",
         "KEYS per SECOND": "每秒按键数",
         HOLDS: "暂存数",
         "LINES per MINUTE": "每分钟行数",
@@ -605,28 +662,28 @@
         "has become a": "成为了",
         "got a new personal best in 5,000,000 BLAST with a time of": "在5,000,000 BLAST中获得了新的个人最佳成绩,时间为",
         "received the": "取得了",
-        "got a new personal best in Expert Quick Play with an altitude of":"在专家快速游戏中刷新了个人最佳成绩,高度为",
-        "got a new personal best in Quick Play with an altitude of":"在快速游戏中刷新了个人最佳成绩,高度为",
+        "got a new personal best in Expert Quick Play with an altitude of":"在王的测试飞行中刷新了个人最佳成绩,高度为",
+        "got a new personal best in Quick Play with an altitude of":"在测试飞行中刷新了个人最佳成绩,高度为",
         "has received the gift of":"获赠成为",
         badge: "徽章",
         achieved: "达成",
         rank: "段位",
         SCORES: "分数",
         "LATEST NEWS": "最新动态",
-        "VIEW TETRA LEAGUE RECORD": "查看联赛回放",
+        "VIEW TETRA LEAGUE RECORD": "查看中门对狙往昔再现",
         "VIEW PERSONAL BEST": "查看最好成绩",
-        "VIEW ALL 40 LINES RECORDS": "查看全部的追逐40光秒回放",
+        "VIEW ALL 40 LINES RECORDS": "查看全部的追逐40光秒往昔再现",
         Achieved: "达成于",
         months: "月",
         ago: "前",
-        "VIEW ALL BLITZ RECORDS": "查看全部的闪击波兰回放",
-        "VIEW ALL RECENT RECORDS": "查看全部的近期回放",
-        RECORD: "回放",
+        "VIEW ALL BLITZ RECORDS": "查看全部的闪击波兰往昔再现",
+        "VIEW ALL RECENT RECORDS": "查看全部的近期往昔再现",
+        RECORD: "往昔再现",
         VIEW: "查看",
         "PLAY TIME": "试炼时长",
         "ONLINE GAMES": "试炼场次",
         "OF WHICH WINS": "获胜场次",
-        "ONLINE GAMES WON": "联赛获胜场次",
+        "ONLINE GAMES WON": "中门对狙获胜场次",
         EXPAND: "展开",
         "GLOBAL LEADERBOARDS FOR 40 LINES, BLITZ AND QUICK PLAY": "关于追逐40光秒,闪击波兰和测试飞行的全球排行榜",
         "View previous seasons": "查看上赛季",
@@ -682,14 +739,14 @@
         "SECRET GRADE": "隐藏段位",
         "A (poorly guarded) secret.": "一个（众所周知的）秘密.",
         CONTENDER: "挑战者",
-        "rounds played": "联赛总挑战回合数",
-        '"Some day, everyone will remember your name!" —Tetra League Ad': "“总有一天,所有人都会记得你的名字!”——联赛海报",
+        "rounds played": "中门对狙总挑战回合数",
+        '"Some day, everyone will remember your name!" —Tetra League Ad': "“总有一天,所有人都会记得你的名字!”——中门对狙海报",
         "REVERSE SWEEP SPECIALIST": "逆转大师",
         "rounds won with the opponent at match point": "在对手处于赛点时赢得的回合数",
         "Sometimes you need to feel the heat to unlock your best self.": "有时候,你只是需要被推一把.",
         "THE SPIKE OF ALL TIME": "超究极必杀爆发",
         "largest spike sent (base attack, excluding margin time and Surge)": "发动的最大spike数（基本攻击,不包含margin加成和浪涌增压）",
-        "Flashy techniques are a staple amongst Tetra League's glory-seeking competitors.": "华丽的技巧是每个想在联赛中大放异彩的挑战者的标配.",
+        "Flashy techniques are a staple amongst Tetra League's glory-seeking competitors.": "华丽的技巧是每个想在中门对狙中大放异彩的挑战者的标配.",
         "SPEED PLAYER": "速度爱好者",
         "rounds won with a higher PPS than the opponent": "在每秒方块数（PPS）高于对手的情况下获胜的回合数",
         "A simple strategy that can overwhelm even the most poised of masters.": "功夫再高,也怕菜刀.",
@@ -754,7 +811,7 @@
         'highest floor discovered while using the "No Hold", "Double Hole Garbage" and "Messier Garbage" mods': "在启用“禁止暂存”、“空洞诅咒”和“垃圾之乱”模组的情况下抵达的最高层数",
         '"Escape has become a distant dream, yet still we struggle..."': "“纵使已经深陷泥潭,我们仍会挣扎到最后一刻...”",
         "THE GRANDMASTER": "方块大师",
-        'highest floor discovered while using the "Gravity" and "Invisible" mods': "在启用“重力”和“隐形”模组的情况下抵达的最高层数",
+        'highest floor discovered while using the "Gravity" and "Invisible" mods': "在启用“塔”和“隐者”模组的情况下抵达的最高层数",
         "When the world descends into chaos, the grandmaster remains at peace.": "纵使世界混乱,大师亦巍然不动.",
         "THE ESCAPE ARTIST": "金蝉脱壳",
         '"An impossible situation! A daring illusionist! Will he make it out alive?"': "“绝对不可能逃脱的处境加上一个大胆的魔术师!他能创造奇迹吗?”",
@@ -781,7 +838,7 @@
         'highest floor discovered with the "Gravity" mod': "在启用“重力”模组的情况下抵达的最高层数",
         "What will you do when it all comes crumbling down?": "当万块倾倒而下,你会做些什么?",
         "THE HERMIT": "隐士",
-        'highest floor discovered with the "Invisible" mod': "在启用“隐匿”模组的情况下抵达的最高层数",
+        'highest floor discovered with the "Invisible" mod': "在启用“隐者”模组的情况下抵达的最高层数",
         "When the outside world fails you, trust the voice within to light a path.": "自助者,天助之.",
         "THE MAGICIAN": "魔术师",
         'highest floor discovered with the "All-Spin" mod': "在启用“All-Spin”模组的情况下抵达的最高层数",
@@ -843,7 +900,7 @@
         "Neither the freedom of life or peace of death.": "生无自由,死无安宁.",
         "neither the freedom of life or peace of death": "生无自由,死无安宁",
         "THE EXILE": "放逐",
-        'highest floor discovered with the reversed "Invisible" mod': "在启用逆位“隐匿”模组的情况下抵达的最高层数",
+        'highest floor discovered with the reversed "Invisible" mod': "在启用逆位“隐者”模组的情况下抵达的最高层数",
         "Never underestimate blind faith.": "永远不要低估盲目的信仰.",
         "never underestimate blind faith": "永远不要低估盲目的信仰",
         "THE WARLOCK": "邪术师",
@@ -863,6 +920,7 @@
         "GRAND AUDIENCE": "最佳观众",
         'Type a message containing "gg" within 10 seconds after spectating a Quick Play world record being broken': "在观看测试飞行世界纪录被打破后的10秒内在公共频道发送包含“gg”的信息",
         '"You\'re not gonna want to miss this one!" -Arena Ticket Scalper': "“您绝对不想错过这次精彩时刻!” -场馆黄牛",
+        
         //举报相关文本
         REPORT: "举报",
         "please choose a category to report": "请选择向TETR.IO管理员报告",
@@ -881,6 +939,7 @@
         OTHER: "其他",
         "otherwise not listed abuse against the TETR.IO terms of service, such as users under the age of 13, or rules, such as impersonation.": "其他未列出的违反TETR.IO服务条款的滥用行为,包括但不限于未满13岁的用户、冒名顶替等.",
         CANCEL: "取消",
+        
         //连接错误相关文本
         "CONNECTION ERROR": "连接错误",
         "a connection error has occured and the connection was closed unexpectedly.": "发生了连接错误,连接被意外关闭.",
@@ -888,10 +947,12 @@
         "this disconnect was detected to be caused by your network connection.": "系统检测到本次掉线由你的网络连接引起.",
         "SOCKET ID": "帐户ID",
         OK: "彳亍",
+        
         //单人模式相关文本
         SOLO: "独秀",
         "challenge yourself and top the leaderboards": "超脱自我",
         "press START to begin playing": "按下开始挑战进行试炼",
+        
         //追逐40光秒相关文本
         "CLEAR 40 LINES!": "消除四十行!",
         "GO!": "开始!",
@@ -939,6 +1000,7 @@
         TIMER: "计时器",
         LEVEL: "等级",
         "display the current level in this slot": "在该槽位中显示当前等级",
+        
         //闪击波兰相关文本
         "TWO-MINUTE BLITZ": "两分钟闪击波兰",
         GO: "开始",
@@ -948,13 +1010,23 @@
         "clear lines to level up and gain more points and speed!": "消行,升级,提速,打分!",
         "---default---": "---默认设置---",
         START: "开始试炼",
+        
         //禅意模式相关文本
         ZEN: "禅意模式",
         "relax or train in this neverending mode": "用于放松或训练的无尽模式",
         "relax or train in a neverending mode! your progress is stored across games.": "在无尽模式中放松或训练!进度会在离开时保存.",
         "adjust the feel or help train using the ZEN SIDEBAR.": "使用禅意模式侧边栏调整心境或进行训练",
         "you can undo and redo placements with CTRL+Z and CTRL+Y!": "你可以用CTRL+Z和CTRL+Y来撤销和重做!",
-        //禅意模式局内的文本
+        
+        //禅意模式局内文本
+        "DESTROY ZEN PROGRESS?": "重置禅意模式进度?",
+        "you'll be reset to LEVEL 1 and 0 SCORE, with an empty board to start anew.": "这会重置等级和分数,一切需要从头开始",
+        "RESET ZEN": "重置禅意模式",
+        "REALLY DESTROY ZEN PROGRESS?": "你真的要毁灭你的禅意模式进度吗?",
+        "ARE YOU SURE YOU WON'T REGRET DESTROYING YOUR ZEN PROGRESS???": "你绝对,100%确定你不会为重置你的禅意模式进度而后悔,直到永远?",
+        "I'M CERTAIN": "我完全确定!",
+        "it's gone!": "已重置!",
+        
         "hover to change settings": "悬停以改变设置",
         LEVELING: "升级",
         SPINS: "旋转",
@@ -990,7 +1062,7 @@
         //自定义单机相关文本
         CUSTOM: "自定义",
         "play, train and experiment by your rules": "按照自定义的规则进行放松、训练和实验",
-        "play as you wish! replays are not submitted.": "尽情享受!回放不会被记录",
+        "play as you wish! replays are not submitted.": "尽情享受!往昔再现不会被记录",
         OBJECTIVE: "目标",
         "Disable combo chaining": "禁用连击增伤",
         'use random seed (overrides "seed")': "使用随机种子（覆盖种子）",
@@ -1211,7 +1283,7 @@
         "show animated emotes in chat": "显示聊天内的动态表情",
         "invert chat colors": "聊天栏反色",
         "darken screen behind chat": "聊天栏暗色背景",
-        "keep replay tools open": "一直显示回放工具栏",
+        "keep replay tools open": "一直显示往昔再现工具栏",
         "hide network warning icons": "隐藏网络警告图标",
         "warn me when the game is not focused": "焦点不在窗口时提醒",
         "show the welcome guide": "面向初级挑战者的引导",
@@ -1239,7 +1311,7 @@
         //加载文本
         "requesting orders…": "请求命令···",
         "requesting account data…": "正在请求账户数据···",
-        "fetching TETRA LEAGUE data…": "获取联赛数据···",
+        "fetching TETRA LEAGUE data…": "获取中门对狙数据···",
         "fetching room listing…": "获取房间列表···",
         "joining room…": "加入房间中···",
         "leaving room…": "离开房间中···",
@@ -1249,7 +1321,7 @@
         "SERVER SWITCHED": "服务器已切换",
         "YOU ARE ALREADY IN THE ROOM": "你已在该房间",
         "fetching records…": "获取记录中···",
-        "fetching replay…": "获取回放中···",
+        "fetching replay…": "获取往昔再现中···",
         "fetching achievements…": "获取成就中···",
         "getting ready to spectate…": "正在准备旁观战局···",
         //账户相关文本
@@ -1271,10 +1343,10 @@
         PRIVACY: "隐私",
         SAVE: "保存",
         "show total time played on my profile": "在我的个人资料中显示总试炼时长",
-        "show # of online games won on my profile": "在我的个人资料中显示获胜的联赛战局数",
-        "show # of online games played on my profile": "在我的个人资料中显示所挑战的总联赛战局数",
+        "show # of online games won on my profile": "在我的个人资料中显示获胜的中门对狙战局数",
+        "show # of online games played on my profile": "在我的个人资料中显示所挑战的总中门对狙战局数",
         "show my country on my profile": "在我的个人资料中显示我的地区",
-        "enable TETRA LEAGUE chat":"启用TETRA联赛聊天",
+        "enable TETRA LEAGUE chat":"启用中门对狙聊天",
         "WHO CAN ADD ME AS FRIEND":"谁能加我为好友",
         "This does not apply retroactively.": "这并不具有追溯性.",
         "MY FRIENDS": "我的好友",
@@ -1283,7 +1355,7 @@
         'e.g. "Online", "Away", "Offline". People who cannot see whether you\'re online cannot invite you to rooms either.': "例如:“在线”、“离开”、“离线”.不能看到你是否在线的人也不能邀请你去房间.",
         NOBODY: "没有人",
         "WHO CAN SEE WHAT I'M DOING": "谁能看到我在做什么",
-        'e.g. "Playing 40 LINES", "In TETRA LEAGUE queue", "In Menus"': "例如:“正在追逐40光秒”、“正在挑战联赛”、“在主菜单中“",
+        'e.g. "Playing 40 LINES", "In TETRA LEAGUE queue", "In Menus"': "例如:“正在追逐40光秒”、“正在挑战中门对狙”、“在主菜单中“",
         "WHO CAN SEE WHAT ROOM I'M IN": "谁能看到我在哪个房间",
         'e.g. "In QUICK PLAY lobby", "In a public custom room". People who can see what room you\'re in can also quickly join said room. Private rooms are always hidden.': "例如:”在测试飞行房间“、”在公开自定义房间“.能看到你在哪个房间的人也能迅速加入这个房间.私人房间总是隐藏的.",
         "WHO CAN SEND ME DIRECT MESSAGES": "谁可以直接给我发信息",
@@ -1321,7 +1393,7 @@
         BANNED: "账号封禁中",
         "this user is currently banned. bans are placed when TETR.IO rules or terms of service are broken.": "由于违反TETR.IO规则,该账号目前处于封禁状态",
         "ANONYMOUS ACCOUNT":"匿名账号",
-        "Anonymous accounts have no meaningful statistics and cannot save replays.":"匿名账号没有有意义的统计数据,也无法保存回放.",
+        "Anonymous accounts have no meaningful statistics and cannot save replays.":"匿名账号没有有意义的回忆,也无法保存往昔再现.",
         "Information about this user is temporarily unavailable.":"目前无法获取此用户的相关信息.",
         "BOT ACCOUNT":"机器人账号",
         "This is an approved bot account. Bots that do not have this tag are banned on sight, together with their creators.":"这是一个已获批准的机器人账号.未标注此标签的机器人及其创建者一经发现即被封禁.",
@@ -1338,7 +1410,7 @@
         "PERSONAL BEST": "最佳纪录",
         "OUT OF FOCUS": "失去焦点",
         "click to return to TETR.IO": "点击回到TETR.IO",
-        "replay will not be saved": "回放将不会被保存",
+        "replay will not be saved": "不会有往昔再现",
         MANUAL: "手册",
         "WINNER THIS ROUND": "本轮胜者",
         bgm: "音乐",
@@ -1352,7 +1424,7 @@
         BACK: "返回",
         HOME: "大厅",
         EXIT: "退出",
-        "an update is required to connect to multiplayer servers. click here to update!": "需要更新以连接到多人游戏服务器.点击这里进行更新!",
+        "an update is required to connect to multiplayer servers. click here to update!": "需要更新以连接到多人服务器.点击这里进行更新!",
         //包含特殊文字
         "Ǳ LEADERBOARDS": "Ǳ 排行榜",
         "Ǳ VIEW FULL": "Ǳ 查看完整排行榜",
@@ -1395,10 +1467,10 @@
         AWAY: "离开",
         "appear away, unless you're offline or busy": "显示离开,表示你不在线或很忙",
         BUSY: "正忙",
-        "appear busy, unless you're offline. receive no notifications. always enabled in TETRA LEAGUE (unless you're invisible)": "显示很忙,除非你是离线的.不会收到任何通知.在TETRA 联赛中总是启用（除非你隐身了）",
+        "appear busy, unless you're offline. receive no notifications. always enabled in TETRA LEAGUE (unless you're invisible)": "显示很忙,除非你是离线的.不会收到任何通知.在中门对狙中总是启用（除非你隐身了）",
         INVISIBLE: "隐匿",
         "appear offline at all times": "始终处于离线状态",
-        REPLAY: "回放",
+        REPLAY: "往昔再现",
         LIVE: "直播",
         grid: "网格",
         "You forfeited a ranked match": "你放弃了一场排位赛",
@@ -1551,7 +1623,7 @@
         "Tweak the music randomizer to your liking.": "根据自己的喜好调整曲库",
         "The volume at which music and jingles play.": "音乐和铃声的播放音量.",
         "The volume at which sound effects play.": "声音效果播放的音量.",
-        "How much stereo to apply. A value of 0% means all sound is centered, whereas a value of 100% plays sounds that happen aside your board on different ears.": "应用多少立体声.0%的值意味着所有的声音都在中心位置,而100%的值则是在不同的耳朵上播放发生在你游戏中的声音.",
+        "How much stereo to apply. A value of 0% means all sound is centered, whereas a value of 100% plays sounds that happen aside your board on different ears.": "应用多少立体声.0%的值意味着所有的声音都在中心位置,而100%的值则是在不同的耳朵上播放发生在你框架中的声音.",
         "Whether to allow scrolling ingame (or holding ALT and scrolling anywhere) to change the volume.": "是否允许在框架中用滚轮（或按住ALT并滚动到任何地方）来改变音量.",
         "Whether to play a sound effect that signifies the next piece that'll come up.": "是否播放代表下一个方块的声音效果.",
         "Whether to hear the sounds of other people playing in Multiplayer.": "是否能在多人模式中听到其他人的声音.",
@@ -1601,7 +1673,7 @@
         "If enabled, show animated emotes in chat.": "如果启用,在聊天中显示动态表情.",
         "If enabled, chat text shows in black (good for light backgrounds).": "如果启用,聊天文本显示为黑色（对浅色背景有好处）.",
         "If enabled, show a background behind chat messages when typing.": "如果启用,打字时在聊天信息后面显示一个背景.",
-        "If enabled, the replay tools do not collapse when you're not using them.": "如果启用,当你不使用这些工具时,回放工具栏不会关闭.",
+        "If enabled, the replay tools do not collapse when you're not using them.": "如果启用,当你不使用这些工具时,往昔再现工具栏不会关闭.",
         "If enabled, network warning icons will not be shown.": "如果启用,将不显示网络警告图标.",
         "If enabled, a warning is shown when TETR.IO is out of focus.": "如果启用,当TETR.IO失焦时,会显示一个警告.",
         "If enabled, show the simple guide with the keybinds in multiplayer lobbies.": "如果启用,在多人模式大厅中显示带有键盘绑定的简单指南.",
@@ -1614,8 +1686,8 @@
         "If enabled, show a custom background image. If disabled, uses default background.": "如果启用,显示一个自定义的背景图片.如果禁用,则使用默认背景.",
         "Save your new privacy settings.": "保存你的新隐私设置.",
         "If enabled, show how much time you' ve played TETR. IO for.": "如果启用,显示你挑战了多长时间的TETR.IO",
-        "If enabled, show your amount of online games won on your profile.": "如果启用,在你的个人资料上显示你赢得的联赛的数量.",
-        "If enabled, show your amount of online games played on your profile.": "如果启用,在你的个人资料上显示你挑战过的联赛数量.",
+        "If enabled, show your amount of online games won on your profile.": "如果启用,在你的个人资料上显示你赢得的中门对狙的数量.",
+        "If enabled, show your amount of online games played on your profile.": "如果启用,在你的个人资料上显示你挑战过的中门对狙数量.",
         "If enabled, show your country as a flag on your profile.": "如果启用,将你的地区代表旗帜显示在你的个人资料上.",
         "Only people who you're added as friend can add you as friend.": "只有被你加为好友的人才能加你为好友.",
         "Anyone can add you as friend.": "任何人都可以加你为好友.",
@@ -1650,10 +1722,10 @@
         "The type of metric to display in the third left-hand slot.": "要在面板左侧第三个信息槽中显示的度量衡的类型.",
         "The type of metric to display in the fourth left-hand slot.": "要在面板左侧第四个信息槽中显示的度量衡的类型.",
         "The type of metric to display in the right-hand slot.": "要在面板右侧第一个信息槽中显示的度量衡的类型.",
-        "Open in the standalone TETRA CHANNEL site": "打开独立的TETRA频道网站",
+        "Open in the standalone TETRA CHANNEL site": "打开独立的频道网站",
         "Destroy all ZEN progress.": "消除禅意模式的全部进度.",
-        "TETRA LEAGUE rank": "联赛段位",
-        "Online games won / online games played": "联赛获胜数 / 联赛总数",
+        "TETRA LEAGUE rank": "中门对狙段位",
+        "Online games won / online games played": "中门对狙获胜数 / 中门对狙总数",
         "Total time played": "总试炼时间",
         "I enjoyed it!": "我很享受这场试炼!",
         "I did not enjoy it": "我不享受这场试炼",
@@ -1683,7 +1755,7 @@
         "Don't allow pressing Hold between pieces.": "禁止在方块生成间隙输入暂存指令",
         "The next piece is Held if the key is held at the time the piece spawns.": "在方块生成瞬间按住暂存键,立即触发暂存",
         "The next piece is Held if any hold inputs are entered between pieces.": "在方块生成间隙的暂存指令将作用于新方块",
-        "Game mode.": "游戏模式.",
+        "Game mode.": "对局模式.",
         "Amount of rounds one must win to win the game.": "获胜所需回合数",
         "Amount of rounds one must win over the second place to secure the win.": "获胜所需领先回合数",
         "When not 0, winning this amount of rounds always secures the win regardless of Win By. Only applies when Win By is greater than 1.": "强制胜出回合数（覆盖Win By规则）",
@@ -1702,7 +1774,7 @@
         "This achievement is only visible to the worthy.": "此成就仅对值得的人可见.",
         "This achievement does not contribute to your Achievement Rating.": "此成就不予提供AR.",
         "hover over a setting for more info": "将鼠标悬停在设置名称上查看详细说明",
-        "If enabled, cap the framerate to the screen refresh rate. More reliable, but may leave performance on the table depending on your configuration.": "如果启用此选项,帧率将限制在屏幕刷新率以内.以获得更稳定的游戏体验,但根据您的系统配置不同,可能会导致性能无法充分发挥.",
+        "If enabled, cap the framerate to the screen refresh rate. More reliable, but may leave performance on the table depending on your configuration.": "如果启用此选项,帧率将限制在屏幕刷新率以内.以获得更稳定的框架体验,但根据您的系统配置不同,可能会导致性能无法充分发挥.",
         "If enabled, automatically download and install updates.": "如果启用此选项,系统将自动下载并安装更新.",
         "If enabled, show your current activity in Discord.": "如果启用此选项,将在 Discord 中显示您的当前状态.",
         "If enabled, the taskbar icon will flash when something important happens.": "如果启用此选项,当发生重要事件时,任务栏图标会闪烁.",
@@ -1782,7 +1854,7 @@
     // 占位符
     const placeholderMap = {
         "enter room id or url and hit enter...": "输入房间号或网址并按回车键……",
-        "enter replay id, url or username and hit enter...": "输入回放id、网址或用户名并按回车键……",
+        "enter replay id, url or username and hit enter...": "输入往昔再现碎片名、网址或用户名并按回车键……",
         "background URL (use multiple by separating with commas)": "背景图片地址（多张图片用逗号分隔）",
         "Write something...": "写点什么吧……",
         USERNAME: "用户名",
@@ -1801,7 +1873,7 @@
 
     // 伪元素（::before, ::after）文本
     const pseudoElementMap = {
-        ".replayid::before": "回放id:",
+        ".replayid::before": "往昔再现碎片:",
         ".rc_switch_knob::before": "关",
         "input:checked + .rc_switch_knob::before": "开",
     };
@@ -1894,7 +1966,7 @@
         "Clear a T-Spin Double/Triple\ncentered in column 1 or 10": "T旋消二/三 但旋转中心在边列",
     };
 
-    // ===== 游戏内替换 =====
+    // ===== 框架内替换 =====
     (async () => {
         const { open: XMLHttpRequestOpen, send: XMLHttpRequestSend } = unsafeWindow.XMLHttpRequest.prototype;
 
@@ -2348,7 +2420,7 @@
 
         // 添加红色提示文本
         const warningText = document.createElement('div');
-        warningText.textContent = '此功能为woshizhazha120开发的测试功能,在网络条件不佳时可能无法正常生效,开启后如遇到卡顿等游戏内问题请关闭';
+        warningText.textContent = '此功能为woshizhazha120开发的测试功能,在网络条件不佳时可能无法正常生效,开启后如遇到卡顿等框架内问题请关闭';
         warningText.style.cssText = `
             color: #ff6b6b;
             font-size: 12px;
