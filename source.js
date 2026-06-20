@@ -357,6 +357,11 @@
         
         "Welcome to chat! Please remember to be civil to your opponents.": "欢迎来到测试飞行,加油,特种兵!",
 
+        "kick": "踢出",
+        "ban": "封禁",
+        "move to spectators": "移动至旁观者",
+        "transfer ownership": "移交狗群主",
+
         "VERSUS KNOCKOUT": "对战",
         "ROYALE KNOCKOUT": "绝地求生",
         "PRACTICE KNOCKOUT": "练习",
